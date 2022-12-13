@@ -24,12 +24,13 @@ DROP TABLE IF EXISTS `tbl_doacao`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_doacao` (
   `id_doacao` int(7) NOT NULL AUTO_INCREMENT,
-  `volume_doacao` decimal(4,2) DEFAULT NULL,
   `id_doador` int(4) NOT NULL,
+  `volume_doacao` decimal(5,2) NOT NULL,
+  `data_doacao` date NOT NULL,
   PRIMARY KEY (`id_doacao`),
   KEY `fk_doador` (`id_doador`),
   CONSTRAINT `fk_doador` FOREIGN KEY (`id_doador`) REFERENCES `tbl_pessoa` (`id_pessoa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +39,7 @@ CREATE TABLE `tbl_doacao` (
 
 LOCK TABLES `tbl_doacao` WRITE;
 /*!40000 ALTER TABLE `tbl_doacao` DISABLE KEYS */;
+INSERT INTO `tbl_doacao` VALUES (1,1,354.12,'2022-12-13'),(2,1,235.12,'2021-09-11');
 /*!40000 ALTER TABLE `tbl_doacao` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-06 12:16:25
+-- Dump completed on 2022-12-13 11:22:12

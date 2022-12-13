@@ -31,7 +31,7 @@ CREATE TABLE `tbl_pessoa` (
   `telefone_pessoa` varchar(11) DEFAULT NULL,
   `telefone_fixo_pessoa` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id_pessoa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `tbl_pessoa` (
 
 LOCK TABLES `tbl_pessoa` WRITE;
 /*!40000 ALTER TABLE `tbl_pessoa` DISABLE KEYS */;
+INSERT INTO `tbl_pessoa` VALUES (1,'Samuel','Bezerra',17,'A+','81912345678','3214-5465'),(2,'Luís','Lima',20,'B+','81998215374','7612-9472'),(4,'Luciano','José',34,'AB+','81982317853','6471-8275'),(5,'Samuel','Macedo',36,'B+',NULL,NULL),(6,'Fujiro','Kamiyamoto',100,'AB-','81921355112',NULL),(7,'Takacara','Nomuro',7,'AB-',NULL,'7212-3439');
 /*!40000 ALTER TABLE `tbl_pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-06 12:16:25
+-- Dump completed on 2022-12-13 11:22:12
